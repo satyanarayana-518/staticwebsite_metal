@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .navbar {
+        display: flex;
+        justify-content: end;
+        width: 1210px;
+        height: 34px;
+        padding: 20px 25px;
+        position: fixed;
+        background: url("https://themewagon.github.io/metal/images/header.jpg");
+      }
+      .logo-img {
+        width: 180px;
+        height: 50px;
+        margin-left:70px;
+        margin-right:590px;
+      }
+      .unlist {
+        display: flex;
+        justify-content: end;
+        gap: 50px;
+        margin-right: 50px;
+      }
+      .unlist li {
+        list-style-type: none;
+      }
+      .unlist li a {
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+      }
+      .unlist li a:hover {
+        color: rgb(251, 255, 0);
+      }
+      .banner-img {
+        width: 600px;
+        height:550px;
+        border-radius: 10%;
+        margin-top:150px;
+        margin-right:50px;
+        margin-left:100px;
+        border:10px solid white;
+      }
+      .cont{
+        background-color: rgba(255, 204, 0);
+        width: 100%;
+        height:800px;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+      }
+      .text-cont{
+        margin-top:150px;
+        margin-left:70px;
+      }
+      .h1-mp{
+        color:white;
+        font-size:54px;
+      }
+      .p-mp{
+        padding:30px 10px;
+        color:white;
+        font-size:20px;
+      }
+      .btn-mainp{
+        background-color: black;
+        color:white;
+        padding:15px;
+        width:150px;
+        margin-right:20px;
+        border:none;
+      }
+      .abut-grid{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top:50px;
+        padding:40px;
+        gap:80px;
+      }
+      .abut-img{
+        width:70%;
+        height:400px;
+        border-radius:50%;
+        border:30px solid rgba(198, 198, 18, 0.51)
+      }
+      .abut-h{
+        text-align:center;
+        font-size:48px;
+      }
+      .abut-p{
+        font-size: 18px;
+        text-align:right;
+        padding:10px;
+        margin-top:30px;
+        margin-bottom:30px;
+        margin-right:40px;
+      }
+      .meta-avl{
+        background-color: black;
+        width: 1155px;
+        height:700px;
+        padding:50px;
+      }
+      .h1-meta-avl{
+        color:white;
+        font-size:40px;
+      }
+      .item-str{
+         display:grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:20px;
+      } 
+      .items{
+        background-color: rgb(255,204,0);
+        gap:20px;
+        width:350px;
+        height:370px;
+      }
+      .item-img{
+        margin:30px;
+        width:270px;
+        height:220px;
+      }
+      .item-h4{
+        text-align:center;
+        color:white;
+        font-size:22px;
+      }
+      .btn-metals-se{
+        background-color:white;
+        color:black;
+        padding:15px;
+        width:150px;
+        margin-top:60px;
+        margin-right:20px;
+        font-size:18px;
+        border:none;
+      }
+      .btn-metals-se:hover{
+        background-color: rgb(255,204,0);
+      }
+      .wb{
+        background-color: lightgrey;
+        width:1235px;
+        height:800px;
+        padding:10px;
+      }
+      .frm-bt{
+        background-color:black;
+        color:white;
+        padding:15px;
+        width:150px;
+        margin-right:20px;
+        border:none;
+      }
+      .frm-bt:hover{
+        background-color: white;
+        color:black;
+      }
+      .inp{
+        color:black;
+        background-color: white;
+        padding:20px;
+        margin:20px;
+        width:700px;
+        border:none;
+      }
+      .inp::placeholder{
+        color:black;
+        font-size:18px;
+      }
+      .inp:focus{
+        outline:none;
+      }
+      .frm-bg{
+        padding:50px;
+        margin-top:50px;
+        margin-left:70px;
+        background-color: rgb(255,204,0);
+        width:980px;
+        height:550px;
+        justify-content: space-evenly;
+        text-align:center;
+      }
+      .footer{
+        background-color: black;
+        width:1155px;
+        height:200px;
+        padding:50px;
+      }
+      .fb-p{
+        color:white;
+        font-size:16px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .feedback-m{
+        display:flex;
+        justify-content:center;
+      }
+      .inp-fb{
+        border:none;
+        padding:15px;
+        width: 400px;
+      }
+      .inp-fb:focus{
+        outline:none;
+      }
+      .inp-fb::placeholder{
+        color:grey;
+        font-size: 14px;;
+      }
+      .btn-fb{
+        background-color: rgb(255,204,0);
+        color:white;
+        padding:15px;
+        border:none;
+        width:120px;
+        font-size:14px;
+      }
+      .btn-fb:hover{
+        background-color: gray;
+        color:black;
+      }
+      .var{
+        display:flex;
+        justify-content:space-evenly;
+        color:white;
+        margin:60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+        <div>
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAABBCAYAAACHMKt6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjkwQzQwREQxMkI5RTExRUE5NUQ4OEUxNTIxQzhCMEE0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjkwQzQwREQyMkI5RTExRUE5NUQ4OEUxNTIxQzhCMEE0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTBDNDBEQ0YyQjlFMTFFQTk1RDg4RTE1MjFDOEIwQTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OTBDNDBERDAyQjlFMTFFQTk1RDg4RTE1MjFDOEIwQTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz683+02AAAJ9klEQVR42uxd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"
+            alt=""
+            class="logo-img"
+          />
+        </div>
+      <nav>
+          <ul class="unlist">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+      </nav>
+    </div>
+    <div class="cont">
+      <div class="text-cont">
+        <h1 style="font-size:54px;">Welcome to</h1>
+        <h1 class="h1-mp">Metals Factory</h1>
+        <P class="p-mp">A metal factory is an industrial facility where raw metals are transformed into finished parts and structures. Inside, heavy machinery cuts, bends, and shapes metal sheets or bars using advanced tools like lasers and hydraulic presses. Skilled workers and automated systems then weld or assemble these pieces into precise components.</P>
+        <button class="btn-mainp">Contact Now</button>
+        <button class="btn-mainp">About Factory</button>
+    </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1664459990770-5c1f1353dea6?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1ldGFscyUyMGJvbHRzfGVufDB8fDB8fHww" alt=""
+        class="banner-img">
+      </div>
+    </div>
+    <div class="abut-grid">
+       
+        <div>
+            <img src="https://images.unsplash.com/photo-1730584474196-b0e8a29303e8?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""
+            class="abut-img">
+        </div>
+         <div>
+        <h1 class="abut-h">About Factory</h1>
+        <p class="abut-p">
+            A metal factory is a specialized industrial facility where raw metal materials are transformed into functional structures and parts. Inside the plant, heavy machinery cuts, bends, and shapes sheets or bars of metal with high precision. Workers and automated robotic systems then weld and assemble these individual components into final products. The finished metal is treated with protective coatings to prevent rust and improve long-term durability. Ultimately, these factories supply critical parts to essential global industries, including automotive, construction, and aerospace.
+        </p>
+    <button class="btn-mainp">ABOUT US</button>
+    </div>
+    </div>
+    <div class="meta-avl">
+      <h1 class="h1-meta-avl">Metal products</h1>
+      <p class="p-mp">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter</p>
+      <div class="item-str">
+        <div class="items">
+          <img src="https://themewagon.github.io/metal/images/pro1.png" alt=""
+          class="item-img">
+          <h4 class="item-h4" >Moka pot</h4>
+        </div>
+        <div class="items">
+          <img src="https://themewagon.github.io/metal/images/pro2.png" alt=""
+          class="item-img">
+          <h4 class="item-h4">Cooking pot</h4>
+        </div>
+        <div class="items">
+          <img src="https://plus.unsplash.com/premium_photo-1673208484535-66a8f7d05294?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWV0YWwlMjBmYWN0b3J5JTIwaXRlbXN8ZW58MHx8MHx8fDA%3D" alt=""
+          class="item-img">
+          <h4 class="item-h4">Metal tube</h4>
+        </div>
+      </div>
+      <button class="btn-metals-se">See More</button>
+    </div>
+    <div class="wb">
+      <form action="" class="frm-bg">
+        <h1 class="h1-mp">CONTACT US</h1>
+        <input type="text" name="" id="" placeholder="Name" class="inp">
+        <br>
+        <input type="email" name="" id="" placeholder="Email" class="inp">
+        <br>
+        <input type="tel" name="" id="" placeholder="Phone Number" class="inp">
+        <br>
+        <textarea name="" id="" placeholder="Message" class="inp"></textarea>
+        <br><br>
+        <button class="frm-bt">Send</button>
+      </form>
+    </div>
+    <div class="footer">
+      <p class="fb-p">Newsletter</p><br>
+      <div class="feedback-m">  
+        <input type="email" placeholder="ENTER YOUR EMAIL"  class="inp-fb">
+        <button class="btn-fb">SUBSCRIBE</button>
+      </div>
+      <div class="var">
+        <p>Location</p>
+        <p>+91 9556738090</p>
+        <p>metalsfact123@gmail.com</p>
+      </div>
+      <hr>
+    </div>
+  </body>
+</html
